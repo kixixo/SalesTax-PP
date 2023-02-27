@@ -1,0 +1,32 @@
+{
+  "name": "taxation",
+  "version": "1.0.0",
+  "description": "website to calculate the tax according to Canadian provinces",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "local": "^0.3.3",
+    "node": "^16.5.0",
+    "node.js": "^0.0.1-security"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "website",
+    "canada",
+    "tax",
+    "sales",
+    "sales",
+    "tax",
+    "tax",
+    "per",
+    "province",
+    "province",
+    "tax"
+  ],
+  "author": "Temiloluwa OLUGBANMU",
+  "license": "ISC"
+}

@@ -1,0 +1,169 @@
+<%- include('layouts/header'); -%>
+
+    <body>
+        <header>
+            <img src="" alt="">
+            <h1>Sales Tax</h1>
+        </header>
+        <%- include('layouts/nav'); -%>
+
+
+            <main>
+                <h2>Items on Sale</h2>
+                <section class="sect">
+                    <br>
+
+                    <form action="" method="post">
+
+                        <div class="saleItem">
+                            <label for="book">Books $: <input type="text" value="" name="book" id="book"></label>
+                        </div>
+
+                        <div class="saleItem">
+                            <label for="bag">Bag $: <input type="text" value="" name="bag" id="bag"></label>
+                        </div>
+
+                        <div class="saleItem">
+                            <label for="bottle">Bottles $: <input type="text" value="" name="bottle" id="bottle"></label>
+                        </div>
+
+                        <div class="saleItem">
+                            <label for="charger">Charger $: <input type="text" value="" name="charger" id="charger"></label>
+                        </div>
+
+                        <div class="saleItem">
+                            <label for="lamp">Lamp $: <input type="text" value="" name="lamp" id="lamp"></label>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="classwrapper">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="classwrapper">
+                            <label for="number">Phone</label>
+                            <input type="text" id="number" name="number">
+                        </div>
+                        <div class="classwrapper">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <div class="classwrapper">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        <div class="classwrapper">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                        <div class="classwrapper">
+                            <label for="province">Province</label>
+                            <select name="province" id="province">
+                    <option value="">-------------Select-------------</option>
+                    <option value="1">Alberta</option>
+                    <option value="2">British Columbia</option>
+                    <option value="3">Manitoba</option>
+                    <option value="4">New Brumswick</option>
+                    <option value="5">Newfoundland &amp; Labrador</option>
+                    <option value="6">Northwest Territories</option>
+                    <option value="7">Nova Scotia</option>
+                    <option value="8">Nunavut</option>
+                    <option value="9">Ontario</option>
+                    <option value="10">Prince Edward Island</option>
+                    <option value="11">Quebec</option>
+                    <option value="12">Saskatchewan</option>
+                    <option value="13">Yukon</option>
+                </select>
+                        </div>
+                        <input type="submit" value="Submit" id="submit">
+                    </form>
+
+                    <br/><br/>
+                </section>
+                <section class="sect">
+                    <div class="formData">
+                        <%
+                        if(typeof(errors) != "undefined"){
+                            for(var error of errors){
+                                %>
+                            <p class="errors">
+                                <%= error.msg %>
+                            </p>
+                            <%
+                            }
+                        }
+                    %>
+                                <%
+                    if(typeof(Total) != "undefined"){
+                    %>
+                                    <h2 id="formResult">Your Receipt:</h2>
+                                    <table>
+                                        <tr>
+                                            <th>Name: </th>
+                                            <td>
+                                                <%= fname %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phone: </th>
+                                            <td>
+                                                <%= fnumber %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email: </th>
+                                            <td>
+                                                <%= femail %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Address: </th>
+                                            <td>
+                                                <%= faddress %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>City: </th>
+                                            <td>
+                                                <%= fcity %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Province: </th>
+                                            <td>
+                                                <%= fprovince %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tax: </th>
+                                            <td>
+                                                <%= ftax.toFixed(2) %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Subtotal: </th>
+                                            <td>
+                                                <%= fsubTotal.toFixed(2) %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total: </th>
+                                            <td>
+                                                <%= Total.toFixed(2) %>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <%
+                    }
+                    %>
+                    </div>
+                </section>
+                <p>
+                    <a href="https://www.retailcouncil.org/resources/quick-facts/sales-tax-rates-by-province/" target="_blank">Click Here</a> To visit tax reference website
+                </p>
+            </main>
+
+    </body>
+
+    </html>

@@ -1,0 +1,67 @@
+body {
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+header {
+    padding: 20px 10px 0 10px;
+    background: deepskyblue;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    float: left;
+    color: black;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+main {
+    display: block;
+    clear: both;
+}
+
+div.saleItem {
+    display: block;
+    padding: 10px;
+    clear: both;
+}
+
+div.classwrapper {
+    padding: 20px;
+    display: inline-block;
+}
+
+form {
+    display: inline-block;
+    float: none;
+    border: 2px dashed blue;
+    padding: 20px;
+    margin: auto;
+    max-width: 760px;
+}
+
+div.formData {
+    border: 2px solid skyblue;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+div.formData table {
+    margin: auto;
+    padding: 10px;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 20px;
+    background-color: skyblue;
+}
